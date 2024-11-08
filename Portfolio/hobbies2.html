@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" href="images/logoy.png">
+    <script src="https://kit.fontawesome.com/d8d0a3d87b.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/yoyoslight.gif" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="index2.html">Home</a></li>
+                        <li><a href="aboutme2.html">About</a></li>
+                        <li><a href="favorite2.html">Favorites</a></li>
+                        <li><a href="hobbies2.html">Hobbies</a></li>
+                        <li><a href="contacts2.html">Contacts</a></li>
+                        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>    
+                    </ul>
+                    <div class="lightmode">
+                    <a href="hobbies.html"><img src="images/moon.png" class="light"></a>
+                    </div>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                
+            </div>
+        <div id="hobbies">
+            <div class="container">
+                <h1 class="sub-title">My Hobbies</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/volleyy-removebg-preview.png" >
+                        <div class="layer">
+                            <h3>Volleyball</h3>
+                            <p>This is the first sports that I'd been in love to and until now, I keep playing it</p>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/basket-removebg-preview.png" >
+                        <div class="layer">
+                            <h3>Basketball</h3>
+                            <p>Playing since childhood with my childhood friends and church mates</p>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/games-removebg-preview.png" >
+                        <div class="layer">
+                            <h3>Online Games</h3>
+                            <p>I lived my life playing online games, an I know that I am addicted to it</p>
+                            <a href="#"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">Go Back</a>
+            </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+</script>
+<script>
+     var sidemeu = document.getElementById("sidemenu");
+
+            function openmenu(){
+            sidemeu.style.right = "0";
+            }
+
+            function closemenu(){
+            sidemeu.style.right = "-200px";
+            }
+</script>
+</body>
+</html>

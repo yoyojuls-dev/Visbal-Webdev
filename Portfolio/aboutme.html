@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="icon" href="images/logoy.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d8d0a3d87b.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/yys.gif" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About</a></li>
+                    <li><a href="favorite.html">Favorites</a></li>
+                    <li><a href="hobbies.html">Hobbies</a></li>
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>    
+                </ul>
+                <div class="lightmode">
+                <a href="aboutme2.html"><img src="images/sun.png" class="light"></a>
+                </div>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/image5.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am Julius Ceasar Visbal, from Bagong Silang Caloocan City. Learning things from Computer Science
+                    <br><br>
+                    Motto: Live life to the fullest when you have money
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('pinfo')">Personal Information</p>       
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>HTML, CSS, C, C++</li>
+                            <li><span>Sporty/Flexible</span><br>Basketball, Volleyball, Singing, Dancing</li>
+                            <li><span>Communication</span><br>Slightly Shy but Confident</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Altar Service</span><br>Secretary - Vice President</li>
+                            <li><span>Life Style and Motivational Seminar</span><br>2nd Year Student</li>
+                            <li><span>Charity First Scholar</span><br>Since 2023</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2010-2016</span><br>Gabriela Silang Elementary School</li>
+                            <li><span>2016-2020</span><br>Bagong Silang High School</li>
+                            <li><span>2020-2022</span><br>Our Lady of Fatima University</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="pinfo">
+                        <ul>
+                            <li><span>Birthday</span><br>November 29, 2003</li>
+                            <li><span>Age</span><br>20 Years Old</li>
+                            <li><span>Gender</span><br>Male</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+    </script>
+    <script>
+         var sidemeu = document.getElementById("sidemenu");
+
+                function openmenu(){
+                sidemeu.style.right = "0";
+                }
+
+                function closemenu(){
+                sidemeu.style.right = "-200px";
+                }
+    </script>
+    
+</body>
+</html>
